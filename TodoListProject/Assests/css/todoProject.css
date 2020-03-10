@@ -1,0 +1,85 @@
+body {
+	font-family: Roboto;
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(26,189,48,1) 0%, rgba(0,212,255,1) 100%);
+}
+#container {
+	margin: 100px auto;
+	width: 360px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+	background: #f7f7f7;
+}
+
+.strike {
+	text-decoration: line-through;
+	color: gray;
+}
+
+h1 {
+	background: #2980b9;
+	color: white;
+	margin: 0;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+ul {
+	list-style: none; /* this got rid of bullet points*/
+	margin: 0;
+	padding: 0;
+}
+
+li:nth-child(odd){
+	background: white;
+}
+
+li {
+	height: 40px;
+	line-height: 40px; /* this allows the text to float/appear center in the middles of the line */
+	color: #666;
+
+}
+
+input {
+	font-size: 18px;
+	background-color: #f7f7f7;
+	width: 100%; /* this will allow it to all the way across the container */
+	box-sizing: border-box; /* this accounts for padding and border to allow width to remain 100% of parent element */
+	padding: 13px 13px 13px 20px;
+	color: #2980b9;
+	border: none; /* gets rid of vey small border that is left on input */
+}
+
+/* focus styles apply when you click on the input box */
+input:focus {
+	background: #fff;
+	border: 3px solid #2980b9;
+	outline: none; /* this refers to the browser default highlight around the input box when you click on it */
+
+}
+
+h1 i {
+	float: right;
+}
+
+span {
+	background: #e74c3c; /* red */
+	height: 40px;
+	margin-right: 20px;
+	color: white;
+	text-align: center;
+	width: 0; /* allows the span to be "hidden" */
+	display: inline-block;
+	transition: 0.2s linear; /*allows for ease of sliding out */
+	opacity: 0; /*hides the icon, bc it wasnt hiding even though width was 0*/
+
+}
+
+li:hover span {
+	width: 40px; /* allows the span to appear because now it had a width */
+	opacity: 1.0; /* makes the icon appear as well "become appearnt instead of transparent" */
+
+}
+
